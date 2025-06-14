@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water City - Emergencias de Agua</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e3f2fd;
+      color: #0d47a1;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #42a5f5, #1e88e5);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      color: #1565c0;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    button {
+      background-color: #e53935;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #c62828;
+      transform: scale(1.05);
+    }
+
+    .boton-emergencia {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .alerta {
+      text-align: center;
+      color: #d32f2f;
+      font-weight: bold;
+      display: none;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #0d47a1;
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Water City 🚨💧</h1>
+    <p>Envía una señal de emergencia para recibir ayuda con agua potable</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>🚱 El Problema</h2>
+      <p>Millones de personas enfrentan escasez de agua potable en momentos críticos. Ya sea por desastres naturales, fallos en el suministro o condiciones extremas, no tener acceso al agua puede poner vidas en riesgo.</p>
+    </section>
+
+    <section>
+      <h2>💡 Nuestra Solución</h2>
+      <p>Hemos creado una plataforma donde, con solo un clic, puedes enviar una alerta a centros de ayuda cercanos para que te envíen agua de forma urgente.</p>
+    </section>
+
+    <section>
+      <h2>🛠️ ¿Cómo Funciona?</h2>
+      <ul>
+        <li>Accede a esta página desde tu celular o computadora.</li>
+        <li>Presiona el botón de "Emergencia" si necesitas agua.</li>
+        <li>Tu ubicación se envía a una red de respuesta para activar la ayuda.</li>
+      </ul>
+    </section>
+
+    <section class="boton-emergencia">
+      <h2>🚨 Enviar señal de emergencia</h2>
+      <button onclick="mostrarAlerta()">🔴 NECESITO AGUA</button>
+      <p class="alerta" id="alerta">✅ ¡Tu señal ha sido enviada! Un equipo responderá pronto.</p>
+    </section>
+  </main>
+
+  <footer>
+    Proyecto Escolar - “Water City” | Año 2025 | Unidos por el agua 💙
+  </footer>
+
+  <script>
+    function mostrarAlerta() {
+      document.getElementById("alerta").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
